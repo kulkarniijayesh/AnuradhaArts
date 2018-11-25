@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background: #808080;
+}
+
+@media screen and (max-width: 600px) {
+    body 
+    {
+        position: absolute;
+    }
+}

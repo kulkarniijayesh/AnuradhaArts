@@ -1,0 +1,91 @@
+<div class="container-fluid galleryContent">
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-9 paintingTypes">
+    
+      <ul>
+        <li><a (click)="showSelectedPaintingType('0')">All</a></li>
+        <li><a (click)="showSelectedPaintingType('landscape')">Landscape Paintings</a></li>
+        <li><a (click)="showSelectedPaintingType('portrait')">Portraits</a></li>
+        <li><a (click)="showSelectedPaintingType('animals')">Animals/Birds</a></li>
+      </ul>
+      <br/>
+     
+  </div>
+</div>
+
+<!--<div class="container">
+    <div class="card-columns">
+          <div class="card card-body col-md-4" *ngFor="let card of cards">
+            <img src="{{card.imageUrl}}" class="card-img-top img-fluid"/>
+          </div>
+    </div>
+</div>-->
+
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-9 col-xs-12">
+
+    <div class="row">
+         <div class="portfolioCard col-md-4 col-xs-6" *ngFor="let card of selectedPaintingCardsByType" (click)="showImageDetails(card)">
+            <img src="{{card.imageUrl}}"/>
+         </div>
+    </div>
+      
+    <!--<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 400 }'>
+      <div class="portfolioCard grid-item" *ngFor="let card of cards">
+            <img src="{{card.imageUrl}}" />
+         </div>
+    </div>-->
+
+
+    <!--<div class="col-md-4">
+      <div class="portfolioCard">
+        <img src="assets/img/i2.jpg" />
+       </div>
+       <div class="portfolioCard">
+        <img src="assets/img/i5.jpg" />
+       </div>
+    </div>
+    <div class="col-md-4">
+       <div class="portfolioCard">
+        <img src="assets/img/i3.jpg" />
+       </div>
+       <div class="portfolioCard">
+        <img src="assets/img/i6.jpg" />
+       </div>
+    </div>
+    <div class="col-md-4">
+       <div class="portfolioCard">
+        <img src="assets/img/i4.jpg" />
+       </div>
+       <div class="portfolioCard">
+        <img src="assets/img/i7.jpg" />
+       </div>
+    </div>-->
+
+
+    
+  </div>
+  
+</div>
+</div>
+
+<div id="imageDetails" (blur)="hideImageDetails()" style="display: none" tabindex="0">
+  <img width="40%" height="40%" id="paintingActualImage" src="{{selectedPaintingCard.imageUrl}}"/>
+  <span id="paintingDetails"><h2>{{selectedPaintingCard.paintingName}}</h2>
+  <h6><i>{{selectedPaintingCard.paintingType}}</i></h6>
+  <p><b>Actual painting size: </b>{{selectedPaintingCard.size}}</p>
+  <a id="closeBtn" (click)="hideImageDetails()">close</a>
+  </span>
+</div>
+
+<div id="contactCard">
+
+  <div id="contactCardInsideCard">
+      <h3>Anuradha Kulkarni</h3>
+      <p>Email id: kulkarniias@rediffmail.com<br/> Phone no.: +91-9421453619<br/></p>
+  </div>
+</div>

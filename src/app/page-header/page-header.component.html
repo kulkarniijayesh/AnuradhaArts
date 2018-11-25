@@ -1,0 +1,24 @@
+<!--<div class="pageHeader">
+    <h2 class="brandName vertical-center">ANURADHA ARTS</h2>
+    <ul class="headerMenu">
+        <li><a href="">HOME</a></li>
+        <li><a href="">GALLERY</a></li>
+        <li><a href="">CONTACT</a></li>
+    </ul>
+</div>-->
+
+<div [class]="responsiveNav? 'topnav responsive' : 'topnav' " id="mytopNav">
+    <h2 class="brandName vertical-center">ANURADHA ARTS</h2>
+    <div class="headerMenu">
+    <a href="#home" class="active">Home</a>
+    <a href="#gallery" >Gallery</a>
+    <a href="#contact" >Contact Us</a>
+    <a href="javascript:void(0);" class="icon" (click)="showTopNav()">
+       Menu
+    </a>
+    </div>
+</div>
+
+<script>
+
+</script>
